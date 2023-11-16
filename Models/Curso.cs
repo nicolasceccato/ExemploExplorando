@@ -20,5 +20,10 @@ namespace ExemploExplorando.Models
             int quantidade = Alunos.Count;
             return quantidade;
         }
+
+        public void RemovarAluno(Pessoa aluno)
+        {
+            Alunos.Remove(aluno);
+        }
     }
 }
