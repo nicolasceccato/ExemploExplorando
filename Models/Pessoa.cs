@@ -7,7 +7,22 @@ namespace ExemploExplorando.Models
 {
     public class Pessoa
     {
-        public string Nome { get; set; }
+        private string _nome;
+        public string Nome
+        {
+            get
+            {
+                return _nome.ToUpper();
+            }
+            set
+            {
+                if (value == "")
+                {
+                    throw new ArgumentException("O nome nao pode ser nulo!");
+                }
+                _nome = value;
+            }
+        }
         public int Idade { get; set; }
 
         public void Apresentar()
