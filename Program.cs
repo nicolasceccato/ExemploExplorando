@@ -22,3 +22,7 @@ cursoDeIngles.AdicionarAluno(p2);
 cursoDeIngles.AdicionarAluno(p3);
 
 cursoDeIngles.ListarAlunos();
+
+double porcent = .3421;
+
+Console.WriteLine(porcent.ToString("P"));
