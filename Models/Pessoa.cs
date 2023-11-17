@@ -7,8 +7,19 @@ namespace ExemploExplorando.Models
 {
     public class Pessoa
     {
+        public Pessoa()
+        {
+        }
+
+        public Pessoa(string nome, string sobrenome)
+        {
+            Nome = nome;
+            Sobrenome = sobrenome;
+        }
+
         private string _nome;
         private int _idade;
+
         public string Nome
         {
             get => _nome.ToUpper();
@@ -18,13 +29,15 @@ namespace ExemploExplorando.Models
                 {
                     throw new ArgumentException("O nome nao pode ser nulo!");
                 }
+
                 _nome = value;
             }
-
         }
+
         public string Sobrenome { get; set; }
 
         public string NomeCompleto => $"{Nome} {Sobrenome}";
+
         public int Idade
         {
             get => _idade;
@@ -34,6 +47,7 @@ namespace ExemploExplorando.Models
                 {
                     throw new ArgumentException("A idade nao pode ser menor que zero!");
                 }
+
                 _idade = value;
             }
         }
