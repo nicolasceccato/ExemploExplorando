@@ -48,3 +48,7 @@ catch (Exception e)
 {
     Console.WriteLine($"Ocorreu uma excecao generica. {e.Message}");
 }
+finally
+{
+    Console.WriteLine("Chegou até aqui");
+}
