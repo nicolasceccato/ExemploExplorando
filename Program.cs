@@ -36,7 +36,11 @@ try
         Console.WriteLine(linha);
     }
 }
-catch (Exception e)
+catch (FileNotFoundException e)
 {
-    Console.WriteLine($"Ocorreu uma excecao generia. {e.Message}");
+    Console.WriteLine($"O arquivo nao foi encontrado. {e.Message}");
+}
+catch (DirectoryNotFoundException e)
+{
+    Console.WriteLine($"O diretório nao foi encontrado. {e.Message}");
 }
