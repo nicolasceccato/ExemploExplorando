@@ -27,9 +27,16 @@
 //
 // Console.WriteLine(porcent.ToString("P"));
 
-string[] linhas = File.ReadAllLines("arquivos/arquivoLeitura.txt");
-
-foreach (string linha in linhas)
+try
 {
-    Console.WriteLine(linha);
+    string[] linhas = File.ReadAllLines("arquivos/arquivoLeitura.txt");
+
+    foreach (string linha in linhas)
+    {
+        Console.WriteLine(linha);
+    }
+}
+catch (Exception e)
+{
+    Console.WriteLine($"Ocorreu uma excecao generia. {e.Message}");
 }
