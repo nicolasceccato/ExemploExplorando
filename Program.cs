@@ -44,3 +44,7 @@ catch (DirectoryNotFoundException e)
 {
     Console.WriteLine($"O diretório nao foi encontrado. {e.Message}");
 }
+catch (Exception e)
+{
+    Console.WriteLine($"Ocorreu uma excecao generica. {e.Message}");
+}
